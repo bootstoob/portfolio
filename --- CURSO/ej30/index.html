@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  
+
+  <form id="segundoGradoForm">
+    <label for="a">Coeficiente a:</label>
+    <input type="number" id="a" name="a" required><br><br>
+
+    <label for="b">Coeficiente b:</label>
+    <input type="number" id="b" name="b" required><br><br>
+
+    <label for="c">Coeficiente c:</label>
+    <input type="number" id="c" name="c" required><br><br>
+
+    <button type="button" onclick="calcularSolucion()">Calcular Solución</button>
+  </form>
+
+  <div id="solucion"></div>
+
+  <script>
+    function calcularSolucion() {
+      var a = document.getElementById("a").value;
+      var b = document.getElementById("b").value;
+      var c = document.getElementById("c").value;
+
+      var discriminante = b * b - 4 * a * c;
+
+      if (discriminante < 0) {
+        document.getElementById("solucion").innerText = "No hay soluciones reales";
+      } else {
+        var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+        var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+        document.getElementById("solucion").innerText = "Soluciones: " + x1 + ", " + x2;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

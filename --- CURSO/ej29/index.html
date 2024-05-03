@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 29</h1>
+  <p>
+    Ejercicio 29: Crear cuatro input dentro de un formulario , uno para guardar
+    el dni ,otro para guardar el teléfono ,otro para guardar el correo y un tercer
+    botón tipo submit para enviar los datos .
+    Desde el formulario con el evento onsubmit validaremos los datos
+    con la función validar datos .
+    Como vimos ya en los formularios , para llamar a validar pasamos el
+    objeto this como parámetro: validar(this);
+    Recordar que una vez dentro de la function validar(formulario),
+    accederemos a cada uno de los input según el id que
+    hayamos asignado a cada uno de ellos; ejemplo: formulario.dni.value
+    if (formulario.dni.value.length==0) alert(“No ha rellenado el DNI”);
+  </p>
+
+  <form id="formulario" onsubmit="return validarDatos(this)">
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" required><br><br>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+
+
+
+  <script>
+
+    var correo;
+    var dni;
+    var telefono;
+
+    function validarDatos(formulario) {
+      this.correo = document.getElementById("correo").value;
+      this.dni = document.getElementById("dni").value;
+      this.telefono = document.getElementById("telefono").value;
+
+      console.log(correo);
+      console.log(dni);
+      console.log(telefono);
+
+      comprobarCorreo(correo);
+      validarDniTlf(dni, telefono);
+
+      if (comprobarCorreo && validarDniTlf) {
+        alert("TODOS los datos validados correctamente"); //return true;
+      } else {
+        return false; //return false;
+      }
+    }
+
+    function comprobarCorreo() {
+      var filtro = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+      if (!filtro.test(this.correo)) {
+      console.log(correo);
+      console.log(dni);
+      console.log(telefono);
+        alert("La dirección de correo es inválida");
+        alert("Debe tener el formato: [texto sin espacios] '@' [texto sin espacios] '.' [texto sin espacios]");
+        return false;
+      } else {
+        alert("La dirección de correo es válida");
+        return true;
+      }
+    }
+
+    function validarDniTlf() {
+      var telefono = this.telefono;
+      var dni = this.dni;
+
+      var filtroTelef = /^\d{9}$/;
+      var filtroDni = /^\d{8}[a-zA-Z]$/;
+
+      if (filtroTelef.test(telefono)) {
+        alert("telf válida");
+        if (filtroDni.test(dni)) {
+          alert("dni válida");
+          return true;
+        } else {
+          alert("dni inválida");
+          return false;
+        }
+      } else {
+        alert("telf inválida");
+        return false;
+      }
+    }
+
+
+  </script>
+
+
+
+</body>
+
+</html>

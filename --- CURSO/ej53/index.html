@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 53</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Ejercicio 53</h1>
+  <p>Crear un programa que permite ingresar valores separados por
+    espacios, y luego preguntar qué valor se desea encontrar el índice. El programa
+    debe devolver un mensaje con el índice del primer elemento que sea igual al
+    buscado, o indicar si no se ha encontrado. Ejemplo:
+    <br>
+    // Ingrese valores: 5 7 12 34 54 2 12
+    <br>
+    // Ingrese valor a buscar: 12
+    <br>
+    // El valor 12 se encuentra en el índice 6
+  </p>
+  <hr>
+
+  <input type="text" id="valoresInp">
+  <button onclick="buscarValores()">ingresar valores separados por espacios</button>
+  <p id="resultado"></p>
+
+
+
+  <script> /*
+    function buscarValores() {
+      var valoresInp = document.getElementById("valoresInp").value.trim().split(" ");
+      var valorBuscado = prompt("Ingrese el valor a buscar:");
+
+      console.log(valoresInp)
+
+      var valores = [];
+
+      for (var i = 0; i < valoresInp.length; i++) {
+        if (valoresInp[i] === valorBuscado) {
+          document.getElementById("resultado").textContent = `El valor ${valorBuscado} se encuentra en el índice ${i + 1}`;
+          return;
+        }
+      }
+
+      document.getElementById("resultado").textContent = `El valor ${valorBuscado} no se ha encontrado.`;
+      return false;
+    }
+    */
+  </script>
+
+
+
+</body>
+
+</html>

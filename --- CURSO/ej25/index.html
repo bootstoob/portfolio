@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 25:</h1>
+  <p>
+    Nos piden realizar un programa en JavaScript que simule el
+    comportamiento del juego de las 7 y media. Se trata de jugar con valores del 1 al 10
+    de tal forma que los valores 1-7 tienen el mismo valor numérico y los valores 8, 9 y 10
+    tienen un valor numérico de 0.5. El usuario pedirá números e irá sumando siempre que no
+    se pase de 7.5.
+  </p>
+
+  <button onclick="jugar()">Dame un número</button>
+  <p id="result">Pulsa el botón para jugar</p>
+
+  <p id="puntos"></p>
+  <p id="carta"></p>
+
+</body>
+<script>
+  var puntos = 0;
+  function jugar() {
+    var carta = Math.floor( Math.random()*10 )+1;
+
+    if (puntos < 7.5) {
+
+      if (carta <= 7) {
+        puntos += carta;
+      } else {
+        puntos += 0.5;
+      }
+
+      if (puntos > 7.5) {
+        document.getElementById("result").innerText = "Has perdido. Puntos: " + puntos;
+      } else {
+        if (puntos === 7.5) {
+          mensaje += " ¡Has conseguido 7 y media!";
+        }
+        var mensaje = "Punts actuales: " + puntos + ". ¿Quieres otra carta?";
+        document.getElementById("result").innerText = mensaje;
+
+      }
+
+    }
+
+    document.getElementById("puntos").innerText = "Puntuación: " + puntos;
+    document.getElementById("carta").innerText = "Carta: " + carta;
+
+
+    console.log("Puntuación: " + puntos);
+    console.log("Carta: " + carta);
+
+  }
+</script>
+
+</html>

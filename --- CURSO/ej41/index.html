@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 41</title>
+</head>
+
+<body>
+  <h1>Ejercicio 40:</h1>
+  <p>
+    Rellena un array con números aleatorios (10 por ejemplo). Muéstralo por la
+    consola.
+  </p>
+
+  <hr>
+
+  <label for="nombreInput">Nombre:</label>
+  <input type="text" id="nombreInput">
+  <button onclick="agregarNombre()">Agregar</button>
+  
+  <ul id="listaNombres"></ul>
+
+  <script>
+
+    var nombres = [];
+
+    function agregarNombre() {
+      var nombreInput = document.getElementById("nombreInput").value;
+  
+
+      if (nombres.includes(nombreInput)) {
+        alert("El nombre ya está en la lista.");
+      } else {
+        nombres.push(nombreInput);
+      }
+
+      console.log(this.nombres);
+      listaNombres.innerHTML = ""; 
+    }
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  
+  <h1>Ejercicio 34:</h1>
+  <p>
+    :Completar el programa anterior para que aparezcan las funciones
+    multiplicar ,dividir y resto correspondientes llamadas desde una estructura switch.
+  </p>
+
+
+  <label for="operando1">Operando 1:</label>
+  <input type="number" id="operando1">
+
+  <label for="operando2">Operando 2:</label>
+  <input type="number" id="operando2">
+
+  <br>
+
+  <label for="operacion">Seleccione una operación:</label>
+  <select id="operacion">
+    <option value="suma">Suma</option>
+    <option value="resta">Resta</option>
+    <option value="multiplicacion">Multiplicación</option>
+    <option value="division">División</option>
+    <option value="resto">Resto</option>
+  </select>
+
+  <br>
+  <hr>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcular() {
+      var operando1 = parseFloat(document.getElementById("operando1").value);
+      var operando2 = parseFloat(document.getElementById("operando2").value);
+      var operacion = document.getElementById("operacion").value;
+
+      switch (operacion) {
+        case "suma":
+          suma(operando1, operando2);
+          break;
+        case "resta":
+          resta(operando1, operando2);
+          break;
+        case "multiplicacion":
+          multiplicacion(operando1, operando2);
+          break;
+        case "division":
+          division(operando1, operando2);
+          break;
+        case "resto":
+          resto(operando1, operando2);
+          break;
+        default:
+          document.getElementById("resultado").innerText = "Operación no válida";
+      }
+    }
+
+    function suma(a, b) {
+      var resultado = a + b;
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function resta(a, b) {
+      var resultado = a - b;
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function multiplicacion(a, b) {
+      var resultado = a * b;
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function division(a, b) {
+      var resultado = a / b;
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
+    }
+
+    function resto(a, b) {
+      var resultado = a % b;
+      document.getElementById("resultado").innerText = "Resultado del resto: " + resultado;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Calculadora de Precio de Venta</h1>
+
+  <form id="precioForm">
+    <label for="precioNeto">Precio neto del artículo:</label>
+    <input type="number" id="precioNeto" name="precioNeto" required>
+    <br>
+    <label for="porcentajeBeneficio">Porcentaje de beneficio:</label>
+    <input type="number" id="porcentajeBeneficio" name="porcentajeBeneficio" min="0" required>
+    <br>
+    <label for="porcentajeIVA">Porcentaje de IVA:</label>
+    <input type="number" id="porcentajeIVA" name="porcentajeIVA" min="0" required>
+    <br>
+    <button type="submit">Calcular Precio de Venta</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById("precioForm").onsubmit = function(event) {
+      event.preventDefault();
+
+      var precioNeto = document.getElementById("precioNeto").value;
+      var porcentajeBeneficio = document.getElementById("porcentajeBeneficio").value;
+      var porcentajeIVA = document.getElementById("porcentajeIVA").value;
+
+      var beneficio = (precioNeto * porcentajeBeneficio) / 100;
+      var iva = ((precioNeto + beneficio) * porcentajeIVA) / 100;
+      var precioVentaBruto = precioNeto + beneficio;
+      var precioVentaTotal = precioVentaBruto + iva;
+
+      var resultadoHTML = "<h2>Detalle del Precio de Venta</h2>" +
+                          "<p>Precio Neto: $" + precioNeto.toFixed(2) + "</p>" +
+                          "<p>Porcentaje de Beneficio: " + porcentajeBeneficio + "%</p>" +
+                          "<p>Beneficio: $" + beneficio.toFixed(2) + "</p>" +
+                          "<p>Porcentaje de IVA: " + porcentajeIVA + "%</p>" +
+                          "<p>IVA: $" + iva.toFixed(2) + "</p>" +
+                          "<p>Precio de Venta Bruto: $" + precioVentaBruto.toFixed(2) + "</p>" +
+                          "<p><strong>Precio de Venta Total: $" + precioVentaTotal.toFixed(2) + "</strong></p>";
+
+      document.getElementById("resultado").innerHTML = resultadoHTML;
+    };
+  </script>
+
+</body>
+
+</html>

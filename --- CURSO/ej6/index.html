@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Comprobación y Resta de Valores</h1>
+
+  <form id="valoresForm">
+    <label for="valor1">valor1:</label>
+    <input type="number" id="valor1" name="valor1" required>
+    <br>
+    <label for="valor2">valor2:</label>
+    <input type="number" id="valor2" name="valor2" required>
+    <br>
+    <button type="submit">Calcular Resta</button>
+  </form>
+
+
+</body>
+  <script>
+    document.getElementById("valoresForm").onsubmit = function(event) {
+
+      var valor1 = document.getElementById("valor1").value;
+      var valor2 = document.getElementById("valor2").value;
+      var resta = valor1 - valor2;
+
+      if (valor1 <= 0 || valor2 <= 0) {
+        alert("Alguno de los valores es negativo");
+      }
+
+      if (resta > 0 || valor2 > 10) {
+        alert(valor1 + " + " + valor2 + " = " + resta);
+      } else {
+        alert(" el valor del segundo valor es menor que 10 ó su resta menor que 0");
+      }
+    }
+  </script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Factorial de un número</title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 32:</h1>
+  <p>
+    Crear una función que llamaremos desde un botón, que nos solicite un
+    número entre 1 y 100. Esta función llamará a otra que calcule el factorial de ese
+    número y nos lo mostrará por pantalla.
+  </p>
+
+  <button onclick="solicitarNumero()">Calcular Factorial</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function solicitarNumero() {
+      var numero = parseInt(prompt("Introduce un número entre 1 y 100:"));
+      if (numero >= 1 && numero <= 100) {
+        calcularFactorial(numero);
+      } else {
+        alert("Introduce un número entre 1 y 100.");
+      }
+    }
+
+    function calcularFactorial(numero) {
+      var factorial = 1;
+      for (var i = 1; i <= numero; i++) {
+        factorial *= i;
+        document.getElementById("resultado").innerText = "El factorial es: " + factorial;
+      }
+      return factorial;
+    }
+  </script>
+
+</body>
+
+</html>

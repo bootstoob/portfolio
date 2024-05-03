@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solución de un Sistema de Ecuaciones de Segundo Grado</title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 31:</h1>
+  <p>
+    Realizar el ejercicio anterior creando una página web con un botón que
+    indique “SOLUCION DE UN SISTEMA DE ECUACIONES DE SEGUNDO GRADO”
+    dándole formato al botón . Cuando se pulsa en el botón , se llamará a una función
+    que pida los valores a,b y c de la ecuación de segundo grado (ax2+bx+c) y esta a su
+    vez llamará a la función SegundoGrado enviándole los valores a , b y c como
+    parámetros y resolviendo la ecuación solicitada por el usuario.
+  </p>
+  <button onclick="obtenerValores()">obtener Valores</button>
+
+  <div id="solucion"></div>
+
+  <script>
+    function obtenerValores() {
+      var a = prompt("Introduce el coeficiente a de la ecuación de segundo grado:");
+      var b = prompt("Introduce el coeficiente b de la ecuación de segundo grado:");
+      var c = prompt("Introduce el coeficiente c de la ecuación de segundo grado:");
+      obtenerSoluciones(a, b, c);
+    }
+
+    function obtenerSoluciones(a, b, c) {
+      var discriminante = b * b - 4 * a * c;
+
+      if (discriminante < 0) {
+        document.getElementById("solucion").innerText = "No hay soluciones reales";
+      } else {
+        var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+        var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+        document.getElementById("solucion").innerText = "Soluciones de los valores: " + x1 + ", " + x2;
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>

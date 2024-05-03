@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 36:</h1>
+  <p>
+    Crear una función que intercambie el valor de dos
+    variables solicitadas. Al final la primera variable debe tener el valor de
+    la segunda y la segunda el valor de la primera. Imprimir ambas por
+    pantalla con su nombre anterior y actual
+  </p>
+
+  <hr>
+
+  <label for="variable1">Variable 1:</label>
+  <input type="text" id="variable1">
+
+  <br>
+
+  <label for="variable2">Variable 2:</label>
+  <input type="text" id="variable2">
+
+  <br>
+
+  <button onclick="intercambiarVariables()">Intercambiar Variables</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function intercambiarVariables() {
+
+      var variable1 = document.getElementById("variable1").value;
+      var variable2 = document.getElementById("variable2").value;
+
+      var temp = variable1;
+      variable1 = variable2;
+      variable2 = temp;
+
+      var resultado;
+      resultado += "Variable 1 anterior: " + variable2 + "<br>";
+      resultado += "Variable 2 anterior: " + variable1 + "<br>";
+      resultado += "Variable 1 (actual): " + variable1 + "<br>";
+      resultado += "Variable 2 (actual): " + variable2 + "<br>";
+
+      document.getElementById("resultado").innerHTML = resultado;
+
+    }
+  </script>
+</body>
+
+</html>

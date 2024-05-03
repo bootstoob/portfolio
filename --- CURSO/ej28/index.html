@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 28:</h1>
+  <p>
+    Probar a llamar a la función recorrido desde el evento ONCLICK
+    de un botón . < button type="submit" onclick="recorrido(20,50)">
+      < /button>
+  </p>
+  <button type="submit" onclick="recorrido(20, 50)">Llamar a recorrido</button>
+
+  <script>
+    function recorrido(num1, num2) {
+      if (num1 < num2) {
+        for (var i = num1; i <= num2; i++) {
+          document.write("El número es "+i +"<br>");}
+      }else{
+        document.write("El primer número tiene que ser menor que el segundo");
+      }
+}
+  </script>
+
+</body>
+
+</html>

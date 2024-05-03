@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 26:</h1>
+  <p>
+    Realizar un programa que nos pida una dirección de correo y
+    compruebe si se ha introducido correctamente ,mostrar un mensaje con
+    alert indicando si es correcto o no y el motivo. (@,.)
+  </p>
+  <form id="correoForm">
+    <label for="correo">Introduce tu dirección de correo:</label>
+    <input type="text" id="correo" name="correo" required>
+    <button type="button" onclick="comprobarCorreo()">Comprobar</button>
+  </form>
+
+  <script>
+
+    /*
+    Ej: miexpresión =/azulejo/
+    cadena1=“Tengo un azulejo”;
+    cadena2=“Mi casa está llena de azulejos”;
+    cadena3=“Tengo miles de azulejitos negros”
+    alert(miexpresion.test(cadena1));//Devolvera true
+    alert(miexpresion.test(cadena2));//Devolverá true
+    alert(miexpresion.test(cadena3));//Devolverá false
+    */
+
+    function comprobarCorreo() {
+      var filtro = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      var correo = document.getElementById("correo").value;
+
+      if (!filtro.test(correo)) {
+        alert("La dirección de correo es inválida");
+        alert("Debe tener el formato: [texto sin espacios] '@' [texto sin espacios] '.' [texto sin espacios]");
+      } else {
+        alert("La dirección de correo es válida");
+      }
+
+    }
+  </script>
+
+</html>

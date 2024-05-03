@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio 24:</h1>
+  <p>
+    Imagine que la variable num_hijos contiene la cantidad de hijos que tiene
+    un matrimonio. Si dicha cantidad es uno sacaremos por pantalla “ No le corresponde
+    bonificación “; si es 2,3 o 4 sacaremos por pantalla “Bonificación especial del 30%” ; y
+    si es 5 o más sacaremos por pantalla el mensaje “ Bonificación especial del 60%”.
+    Realizar dicha codificación con la estructura switch.
+  </p>
+
+  <script>
+    var num_hijos = parseInt(prompt("hijos:"));
+
+    switch (num_hijos) {
+      case 1:
+        alert("No le corresponde bonificación");
+        break;
+      case 2: case 3: case 4:
+        alert("Bonificación especial del 30%");
+        break;
+      default:
+        if (num_hijos >= 5) {
+          alert("Bonificación especial del 60%");
+        } else {
+          alert("hijos irreales");
+        }
+    }
+  </script>
+
+</body>
+
+</html>

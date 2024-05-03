@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <form id="cuentaForm">
+    <label for="comida1">Total de la comida1:</label>
+    <input type="number" id="comida1" name="comida1">
+    <br>
+    <label for="comida2">Total de la comida2:</label>
+    <input type="number" id="comida2" name="comida2">
+    <br>
+
+    <hr>
+
+    <label for="bebida1">Total de la bebida1:</label>
+    <input type="number" id="bebida1" name="bebida1">
+    <br>
+    <label for="bebida2">Total de la bebida2:</label>
+    <input type="number" id="bebida2" name="bebida2">
+    <br>
+
+    <hr>
+
+    <button type="submit">Calcular</button>
+  </form>
+
+</body>
+
+
+  <script>
+      document.getElementById("cuentaForm").onsubmit = function(event) {
+
+        var comida1 = document.getElementById("comida1").value;
+        var comida2 = document.getElementById("comida2").value;
+        var bebida1 = document.getElementById("bebida1").value;
+        var bebida2 = document.getElementById("bebida2").value;
+
+        var totalComida = comida1 + comida2;
+        var totalBebida = bebida1 + bebida2;
+        var totalCena = totalComida + totalBebida;
+
+        console.log(
+          "Total de la comida: $" + totalComida + "\n" +
+          "Total de la bebida: $" + totalBebida + "\n" +
+          "Total completo de la cena: $" + totalCena
+        );
+
+        alert(
+          "Total de la comida: $" + totalComida + "\n" +
+          "Total de la bebida: $" + totalBebida + "\n" +
+          "Total completo de la cena: $" + totalCena
+        );
+      };
+  </script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+
+<body>
+
+  <h1>Ejercicio 40:</h1>
+  <p>
+    Rellena un array con números aleatorios (10 por ejemplo). Muéstralo por la
+    consola.
+  </p>
+
+  <hr>
+
+  <div id="asistentes"></div>
+
+
+  <script>
+    var numerosAleatorios = [];
+    var cantidad = 10;
+    for (var i = 0; i < cantidad; i++) {
+      var numero = Math.floor(Math.random() * cantidad) + 1;
+      numerosAleatorios.push(numero);
+    }
+
+
+    console.log(cantidad +" - Números aleatorios:", numerosAleatorios);
+  </script>
+</body>
+
+</html>

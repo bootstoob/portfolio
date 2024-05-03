@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+
+<body>
+
+  <h1>Ejercicio 39:</h1>
+  <p>
+    Tenemos dos listas de asistentes a dos cursos: html y css. Queremos obtener
+    una lista de los asistentes a ambos cursos. La lista estará ordenada.
+    Utilizar la función sort .
+    Ej:
+    var frutas = ["guindas", "manzanas", "bananas"];
+    document.write("< br>");
+      document.write(frutas);
+      frutas.sort(); // ['bananas', 'guindas', 'manzanas'];
+      document.write("< br>");
+        document.write(frutas);
+  </p>
+
+  <hr>
+
+  <div id="asistentes"></div>
+
+
+  <script>
+
+    var asistentesHTML = ["asistente1", "asistente11", "asistente111", "asistente1111"];
+
+    var asistentesCSS = ["asistente2", "asistente22", "asistente222", "asistente2222"];
+
+
+    asistentesHTML.sort();
+    asistentesCSS.sort();
+
+    console.log(asistentesHTML);
+    console.log(asistentesCSS);
+
+    document.write("<p>Asistentes: " + "</p>" +asistentesHTML+asistentesCSS);
+
+    var asistentes = "<br>";
+    asistentes += "asistentesHTML: " + asistentesHTML + "<br>";
+    asistentes += "asistentesCSS: " + asistentesCSS + "<br>";
+    document.getElementById("asistentes").innerHTML = asistentes;
+
+
+  </script>
+</body>
+
+</html>

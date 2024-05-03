@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>Ejercicio20:</h1>
+  <p>
+    Realizar un programa que mediante la sentencia while nos muestre en la
+    web: primero los números pares entre 1 y 1000 y a continuación todos los números
+    impares del 1 al 1000.
+  </p>
+
+
+  <script>
+    var contador = 1;
+
+    for ( contador; contador <= 10; contador ++) {
+      if (contador % 2 === 0) {
+      document.write(contador + ", ");
+      }
+    }
+
+    contador = 1;
+    document.write("<hr>");
+    
+    for ( contador; contador <= 10; contador ++) {
+      if (contador % 2) {
+      document.write(contador + ", ");
+      }
+    }
+    
+  </script>
+
+</body>
+
+</html>
