@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - [Tu Nombre]</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">[Tu Nombre]</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobremi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section id="inicio" class="hero d-flex align-items-center">
+        <div class="container text-center">
+            <h1>Hola, soy [Tu Nombre]</h1>
+            <h2>Desarrollador [Frontend/Backend/Fullstack]</h2>
+            <a href="#proyectos" class="btn btn-primary btn-lg mt-3">Ver Proyectos</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobremi" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre Mí</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="assets/img/tu-foto.jpg" alt="Foto de perfil" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <p>Soy un desarrollador apasionado por [menciona tus intereses, ej: "crear soluciones innovadoras con JavaScript y Python"]. Me especializo en [tecnologías clave, ej: "desarrollo frontend con HTML, CSS y JavaScript"].</p>
+                    <p>Me encanta aprender nuevas tecnologías y trabajar en proyectos desafiantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Mis Proyectos</h2>
+            <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Proyecto</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/proyecto2.jpg" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Proyecto</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/img/proyecto3.jpg" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nombre del Proyecto</h5>
+                            <p class="card-text">Descripción breve del proyecto.</p>
+                            <a href="#" class="btn btn-primary">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Habilidades</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Lenguajes</h4>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-success" style="width: 90%">JavaScript</div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-info" style="width: 85%">Python</div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-warning" style="width: 80%">HTML/CSS</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Herramientas</h4>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-danger" style="width: 95%">Git</div>
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar bg-primary" style="width: 80%">Bootstrap</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
